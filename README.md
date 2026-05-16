@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💼 JobBoard Frontend
 
-## Getting Started
+This is the frontend of the JobBoard application built using **Next.js (React)** and **Tailwind CSS**.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- View all job posts
+- Create new job requests
+- Category filtering
+- Responsive UI (mobile + desktop)
+- API integration with backend
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js
+- React.js
+- Tailwind CSS
+- Axios / Fetch API
+
+---
+
+## 📦 Installation
 
 ```bash
+npm install
+
+▶️ Run Locally
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+App runs on:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+🔗 Environment Variables
+Create .env.local file:
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
 
-To learn more about Next.js, take a look at the following resources:
+For production (Vercel):
+NEXT_PUBLIC_API_URL=https://your-backend-url.com/api
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🌐 Deployment
+Deploy on Vercel
+Set environment variables in Vercel dashboard
 
-## Deploy on Vercel
+📡 API Connection
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Frontend connects to backend for:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Create Job
+Get Jobs
+Job Details
