@@ -22,8 +22,15 @@ This is the frontend of the JobBoard application built using **Next.js (React)**
 - Axios / Fetch API
 
 ---
+## ⚙️ Setup Instructions
 
-## 📦 Installation
+### 1. Clone Repository
+```bash
+git clone https://github.com/Rashmiamalsha964/jobboard_frontend.git
+
+cd jobboard-frontend
+
+2. Installation
 
 ```bash
 npm install
@@ -55,3 +62,6 @@ Frontend connects to backend for:
 Create Job
 Get Jobs
 Job Details
+
+🌐 Live Demo
+Frontend: https://jobboard-frontend-l737-git-main-rashmis-projects-0054a9d9.vercel.app/
