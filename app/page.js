@@ -9,24 +9,23 @@ export default function Home() {
   const [category, setCategory] = useState("");
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchJobs = async () => {
-      try {
-        setLoading(true);
+ useEffect(() => {
+  const fetchJobs = async () => {
+    try {
+      setLoading(true);
 
-        const res = await getJobs(category);
-        const data = await res.json();
+      const data = await getJobs(category); // ✅ already JSON
+      setJobs(data);
 
-        setJobs(data);
-      } catch (err) {
-        console.error("Error:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
+    } catch (err) {
+      console.error("Error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    fetchJobs();
-  }, [category]);
+  fetchJobs();
+}, [category]);
 
   if (loading) {
     return (
