@@ -29,20 +29,24 @@ export default function NewJob() {
     if (!formData.contactEmail.includes("@"))
       return setError("Valid email required");
 
-    try {
-      setLoading(true);
+   try {
+  setLoading(true);
 
-      const res = await createJob(formData);
+  const res = await createJob(formData);
 
-      if (!res.ok) throw new Error("Failed to create job");
+  console.log("CREATE RESPONSE:", res);
 
-      alert("Job created successfully!");
-      router.push("/");
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Server error");
-    } finally {
-      setLoading(false);
-    }
+  if (res.error || res.success === false) {
+    throw new Error(res.message || "Failed to create job");
+  }
+
+  alert("Job created successfully!");
+  router.push("/");
+} catch (err) {
+  setError(err.message);
+} finally {
+  setLoading(false);
+}
   };
 
   return (
