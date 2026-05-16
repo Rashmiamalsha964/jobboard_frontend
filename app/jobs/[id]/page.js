@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 
-import { getJob, updateJob, deleteJob } from "@/app/api/api";
+import { getJob, updateJob, deleteJob } from "@/lib/api";
 
 export default function JobDetail() {
   const { id } = useParams();
